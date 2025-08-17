@@ -110,7 +110,6 @@ jobs:
             --gc \
             --minify \
             --baseURL "https://seungyeah.github.io/" \
-            -t github-style \
             --destination public
 
           # GitHub Pages에서 언더스코어 파일 무시 방지
