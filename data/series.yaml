@@ -1,0 +1,8 @@
+"샘플 시리즈":
+  name: "샘플 시리즈"
+  description: "Hugo와 GitHub Style 테마를 사용한 블로그 구축 방법을 다루는 시리즈입니다."
+  tags: ["hugo", "blog", "tutorial"]
+"Rust 프로그래밍":
+  name: "Rust 프로그래밍"
+  description: "Rust 언어의 기초부터 고급 주제까지 다루는 시리즈입니다."
+  tags: ["rust", "programming", "systems"]

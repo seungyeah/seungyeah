@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>샘플 시리즈 on 승예's Blog</title><link>http://localhost:1313/series/%EC%83%98%ED%94%8C-%EC%8B%9C%EB%A6%AC%EC%A6%88/</link><description>Recent content in 샘플 시리즈 on 승예's Blog</description><generator>Hugo</generator><language>ko-kr</language><lastBuildDate>Wed, 15 Jan 2025 14:30:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/series/%EC%83%98%ED%94%8C-%EC%8B%9C%EB%A6%AC%EC%A6%88/index.xml" rel="self" type="application/rss+xml"/><item><title>첫 글</title><link>http://localhost:1313/posts/first-post/</link><pubDate>Tue, 31 Dec 2024 10:00:00 +0900</pubDate><guid>http://localhost:1313/posts/first-post/</guid><description>&lt;p>여기는 첫 글입니다.&lt;/p>
+&lt;h2 id="섹션-a">섹션 A&lt;/h2>
+&lt;p>내용 A&lt;/p>
+&lt;h2 id="섹션-b">섹션 B&lt;/h2>
+&lt;pre tabindex="0">&lt;code class="language-mermaid" data-lang="mermaid">flowchart TD
+ A[Start] --&amp;gt; B{Choice}
+ B --&amp;gt;|Yes| C[Path 1]
+ B --&amp;gt;|No| D[Path 2]
+&lt;/code>&lt;/pre></description></item></channel></rss>

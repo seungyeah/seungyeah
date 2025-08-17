@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Intro on 승예&#39;s Blog</title>
+    <link>//localhost:1313/tags/intro/</link>
+    <description>Recent content in Intro on 승예&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Wed, 15 Jan 2025 14:30:00 +0900</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/intro/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>첫 글</title>
+      <link>//localhost:1313/posts/first-post/</link>
+      <pubDate>Tue, 31 Dec 2024 10:00:00 +0900</pubDate>
+      <guid>//localhost:1313/posts/first-post/</guid>
+      <description>&lt;p&gt;여기는 첫 글입니다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;섹션-a&#34;&gt;섹션 A&lt;/h2&gt;&#xA;&lt;p&gt;내용 A&lt;/p&gt;&#xA;&lt;h2 id=&#34;섹션-b&#34;&gt;섹션 B&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;flowchart TD&#xA;  A[Start] --&amp;gt; B{Choice}&#xA;  B --&amp;gt;|Yes| C[Path 1]&#xA;  B --&amp;gt;|No| D[Path 2]&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

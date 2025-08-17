@@ -1,0 +1,323 @@
+<div>
+  <main>
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+      <div class="px-0">
+        <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+          <div class="flex-auto min-width-0 width-fit mr-3">
+            <div class="d-flex">
+              <div class="d-none d-md-block">
+                <a class="avatar mr-2 flex-shrink-0" href="{{ .Site.BaseURL }}">
+                  <img class="avatar-user" src="{{ .Site.BaseURL }}/images/avatar.png" width="32" height="32">
+                </a>
+              </div>
+              <div class="d-flex flex-column">
+                <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                  <span class="author">
+                    <a href="{{ .Site.BaseURL }}">{{ .Site.Params.author }}</a>
+                  </span>
+                  <span class="path-divider">/</span>
+                  <strong class="css-truncate css-truncate-target mr-1" style="max-width: 410px">
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                  </strong>
+                </h1>
+                <div class="note m-0">
+                  Created <relative-time datetime="{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}"
+                    class="no-wrap">
+                    {{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</relative-time>
+
+                  {{ if .Site.Params.lastmod }}
+                  <span class="file-info-divider"></span>
+                  Modified <relative-time datetime="{{ .Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}"
+                    class="no-wrap">
+                    {{ .Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</relative-time>
+                  {{ end }}
+                </div>
+
+                <!-- Series Information removed -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-lg px-3 new-discussion-timeline">
+      <div class="repository-content gist-content">
+        <div>
+          <div class="js-gist-file-update-container js-task-list-container file-box">
+            <div id="file-pytest" class="file my-2">
+              <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header"
+                style="z-index: 2">
+                <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+                  <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                    <!-- TOC Indicator -->
+                    <div class="toc-indicator" id="toc-indicator" style="position: relative;">
+                      <svg aria-hidden="true" viewBox="0 0 16 16" height="16" width="16"
+                        class="octicon octicon-list-unordered">
+                        <path fill-rule="evenodd"
+                          d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000 1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000 1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000 1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z">
+                        </path>
+                      </svg>
+                      <span class="current-heading" id="current-heading">목차</span>
+                      <div class="toc-dropdown" id="toc-dropdown">
+                        <!-- TOC items will be populated by JavaScript -->
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="file-actions flex-order-2 pt-0">
+                    {{ with .Params.tags }}
+                    {{ range $tag := . }}
+                    <a class="muted-link mr-3" href="{{ (printf "/tags/%s/" (urlize $tag)) | relURL }}">
+                      <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                        </path>
+                      </svg>
+                      {{ $tag }}
+                    </a>
+                    {{ end }}
+                    {{ end }}
+                  </div>
+                </div>
+              </div>
+
+              <div class="Box-body px-5 pb-5" style="z-index: 1">
+                <!-- Series Navigation -->
+                {{ if .Params.series }}
+                {{ $currentSeries := index .Params.series 0 }}
+                {{ $seriesPosts := where .Site.RegularPages "Params.series" "intersect" (slice $currentSeries) }}
+                {{ $seriesPosts = $seriesPosts.ByDate }}
+                {{ $currentIndex := 0 }}
+                {{ range $index, $post := $seriesPosts }}
+                {{ if eq $post.Permalink $.Permalink }}
+                {{ $currentIndex = $index }}
+                {{ end }}
+                {{ end }}
+                <div class="series-nav" data-series-slug="{{ urlize $currentSeries }}"
+                  data-current-index="{{ $currentIndex }}" data-total-posts="{{ len $seriesPosts }}">
+                  <div class="series-nav-header">
+                    <div class="series-title-info">
+                      <h3>📚 {{ $currentSeries }} 시리즈</h3>
+                    </div>
+                    <div class="series-nav-controls">
+                      <button id="series-prev-btn" class="series-nav-btn" onclick="navigateSeriesPosts(-1)">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                          <path fill-rule="evenodd"
+                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                        </svg>
+                        이전
+                      </button>
+                      <span class="series-page-info" id="series-page-info">1 / 1</span>
+                      <button id="series-next-btn" class="series-nav-btn" onclick="navigateSeriesPosts(1)">
+                        다음
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                          <path fill-rule="evenodd"
+                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- 모든 포스트 데이터를 data 속성으로 저장 -->
+                  <div id="series-posts-data" style="display: none;">
+                    {{ range $index, $post := $seriesPosts }}
+                    <div class="post-data-item" 
+                         data-index="{{ $index }}"
+                         data-title="{{ $post.Title }}"
+                         data-permalink="{{ $post.Permalink }}"
+                         data-date="{{ $post.Date.Format "2006.01.02" }}"
+                         data-is-current="{{ eq $post.Permalink $.Permalink }}">
+                    </div>
+                    {{ end }}
+                  </div>
+
+                  <div class="series-post-list" id="series-post-list">
+                    <!-- JavaScript로 동적 생성 -->
+                  </div>
+                </div>
+                {{ end }}
+
+                <article class="markdown-body entry-content container-lg content">
+                  {{- .Content -}}
+                </article>
+
+                <!-- Series Navigation removed -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script type="application/javascript" src='{{ "js/toc.js" | absURL }}'></script>
+<link rel="stylesheet" href='{{ "css/toc.css" | absURL }}' />
+<script>
+  // Series posts pagination
+  let seriesCurrentPage = 0;
+  const POSTS_PER_PAGE = 10;
+
+  function initializeSeriesPagination() {
+    const seriesNav = document.querySelector('.series-nav');
+    if (!seriesNav) return;
+
+    const dataElement = document.getElementById('series-posts-data');
+    if (!dataElement) return;
+
+    try {
+      // DOM에서 직접 데이터 읽기
+      const postDataItems = dataElement.querySelectorAll('.post-data-item');
+      const allPosts = Array.from(postDataItems).map(item => ({
+        index: parseInt(item.dataset.index),
+        title: item.dataset.title,
+        permalink: item.dataset.permalink,
+        date: item.dataset.date,
+        isCurrent: item.dataset.isCurrent === 'true'
+      }));
+      
+      console.log('Parsed posts data from DOM:', allPosts);
+      
+      const currentIndex = parseInt(seriesNav.dataset.currentIndex) || 0;
+
+      // 현재 포스트가 있는 페이지로 초기 설정
+      seriesCurrentPage = Math.floor(currentIndex / POSTS_PER_PAGE);
+
+      displaySeriesPosts(allPosts);
+      updateSeriesNavigation(allPosts.length);
+    } catch (error) {
+      console.error('Error parsing series posts data:', error);
+    }
+  }
+
+  function displaySeriesPosts(allPosts) {
+    const postsList = document.getElementById('series-post-list');
+    if (!postsList) return;
+
+    const startIndex = seriesCurrentPage * POSTS_PER_PAGE;
+    const endIndex = Math.min(startIndex + POSTS_PER_PAGE, allPosts.length);
+    const postsToShow = allPosts.slice(startIndex, endIndex);
+
+    postsList.innerHTML = '';
+
+    postsToShow.forEach(post => {
+      const postItem = document.createElement('div');
+      postItem.className = `series-post-item ${post.isCurrent ? 'current' : ''}`;
+
+      // DOM 요소를 직접 생성하여 더 안전하게 처리
+      const numberSpan = document.createElement('span');
+      numberSpan.className = 'series-post-number';
+      numberSpan.textContent = post.index + 1;
+
+      const link = document.createElement('a');
+      link.href = '#';
+      link.className = 'series-post-link';
+      link.textContent = post.title;
+      link.setAttribute('data-permalink', post.permalink);
+
+      const dateSpan = document.createElement('span');
+      dateSpan.className = 'series-post-date';
+      dateSpan.textContent = post.date;
+
+      // 요소들을 postItem에 추가
+      postItem.appendChild(numberSpan);
+      postItem.appendChild(link);
+      postItem.appendChild(dateSpan);
+
+
+      // 링크 클릭 이벤트 추가
+      if (link) {
+        console.log('Adding click event to series post link:', post.title, 'permalink:', post.permalink);
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          const permalink = this.getAttribute('data-permalink');
+          console.log('Series post link clicked! permalink:', permalink);
+          if (permalink) {
+            console.log('Navigating to series post:', permalink);
+            // URL 디코딩하여 정확한 경로로 이동
+            const decodedPermalink = decodeURIComponent(permalink);
+            console.log('Decoded permalink:', decodedPermalink);
+            
+            // 상대 경로인지 확인하고 절대 경로로 변환
+            if (decodedPermalink.startsWith('/')) {
+              // 상대 경로인 경우 현재 도메인과 결합
+              const fullUrl = window.location.origin + decodedPermalink;
+              console.log('Full URL:', fullUrl);
+              window.location.replace(fullUrl);
+            } else if (decodedPermalink.startsWith('http')) {
+              // 절대 URL인 경우 그대로 사용
+              window.location.replace(decodedPermalink);
+            } else {
+              // 상대 경로인 경우 현재 경로에 추가
+              const currentPath = window.location.pathname;
+              const parentPath = currentPath.substring(0, currentPath.lastIndexOf('/'));
+              const fullUrl = window.location.origin + parentPath + '/' + decodedPermalink;
+              console.log('Relative URL converted to:', fullUrl);
+              window.location.replace(fullUrl);
+            }
+          } else {
+            console.error('No permalink found for series post:', post.title);
+          }
+        });
+      } else {
+        console.error('Series post link element not found for:', post.title);
+      }
+
+      postsList.appendChild(postItem);
+    });
+  }
+
+  function updateSeriesNavigation(totalPosts) {
+    const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
+    const pageInfo = document.getElementById('series-page-info');
+    const prevBtn = document.getElementById('series-prev-btn');
+    const nextBtn = document.getElementById('series-next-btn');
+
+    if (pageInfo) {
+      pageInfo.textContent = `${seriesCurrentPage + 1} / ${totalPages}`;
+    }
+
+    if (prevBtn) {
+      prevBtn.disabled = seriesCurrentPage === 0;
+      prevBtn.style.opacity = seriesCurrentPage === 0 ? '0.5' : '1';
+    }
+
+    if (nextBtn) {
+      nextBtn.disabled = seriesCurrentPage >= totalPages - 1;
+      nextBtn.style.opacity = seriesCurrentPage >= totalPages - 1 ? '0.5' : '1';
+    }
+  }
+
+  function navigateSeriesPosts(direction) {
+    const dataElement = document.getElementById('series-posts-data');
+    if (!dataElement) return;
+
+    try {
+      // DOM에서 직접 데이터 읽기
+      const postDataItems = dataElement.querySelectorAll('.post-data-item');
+      const allPosts = Array.from(postDataItems).map(item => ({
+        index: parseInt(item.dataset.index),
+        title: item.dataset.title,
+        permalink: item.dataset.permalink,
+        date: item.dataset.date,
+        isCurrent: item.dataset.isCurrent === 'true'
+      }));
+      
+      const totalPages = Math.ceil(allPosts.length / POSTS_PER_PAGE);
+
+      seriesCurrentPage += direction;
+
+      if (seriesCurrentPage < 0) seriesCurrentPage = 0;
+      if (seriesCurrentPage >= totalPages) seriesCurrentPage = totalPages - 1;
+
+      displaySeriesPosts(allPosts);
+      updateSeriesNavigation(allPosts.length);
+    } catch (error) {
+      console.error('Error navigating series posts:', error);
+    }
+  }
+
+  // 페이지 로드 시 초기화
+  document.addEventListener('DOMContentLoaded', initializeSeriesPagination);
+</script>

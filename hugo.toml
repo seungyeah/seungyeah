@@ -1,0 +1,63 @@
+baseURL = "https://seungyeah.github.io/"
+languageCode = "ko-kr"
+title = "승예's Blog"
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+[params]
+  author = "승예"
+  description = "안녕하세요! 웹 개발자입니다!"
+  github = "seungyeah"
+  email = "closer.fz@gmail.com"
+  url = "https://seungyeah.github.io/"   # 필요하면 이렇게(= baseURL과 동일). 아니면 이 라인 삭제.
+  keywords = "blog, tech, programming"
+  rss = true
+  lastmod = true
+  favicon = "images/github-mark.png"
+  avatar = "images/avatar.png"
+  headerIcon = "images/github-mark-white.png"
+  location = "Korea"
+  userStatusEmoji = "😀"
+  enableGitalk = false
+  enableSearch = true
+  custom_css = ["css/custom.css"]
+  custom_js = ["js/custom.js"]
+
+[frontmatter]
+  lastmod = ["lastmod", ":fileModTime", ":default"]
+  mathjax = true
+
+[permalinks]
+  series = "/series/:slug/"
+
+[menu]
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"     # 앞에 슬래시 붙이면 안전
+    weight = 10
+  [[menu.main]]
+    name = "Series"
+    url = "/series/"
+    weight = 10  
+
+[services]
+  [services.googleAnalytics]
+    ID = ""
+
+    [outputFormats.json]
+  mediaType = "application/json"
+  baseName = "index"
+  isPlainText = false
+
+
+[outputs]
+  home = ["html", "json"]
+
+[outputFormats.json]
+  mediaType = "application/json"
+  baseName = "index"
+  isPlainText = false
+
+[taxonomies]
+  tag = "tags"
+  series = "series"

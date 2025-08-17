@@ -1,0 +1,77 @@
+{{ define "series-single" }}
+<div class="series-detail-content">
+    <div class="container-lg px-3 new-discussion-timeline">
+        <div class="repository-content">
+            {{ $seriesName := .Title }}
+            {{ $seriesPosts := .Pages.ByDate.Reverse }}
+
+            <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+                <div class="px-0">
+                    <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+                        <div class="flex-auto min-width-0 width-fit mr-3">
+                            <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                                <span class="author">{{ $seriesName }}</span>
+                            </h1>
+                            <div class="note m-0">
+                                {{ len $seriesPosts }}개 포스트
+                                {{ if $seriesPosts }}
+                                • {{ (index $seriesPosts 0).Date.Format "2006.01.02" }} 시작
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Series Posts List -->
+            <div class="series-posts-list">
+                {{ if gt (len $seriesPosts) 0 }}
+                {{ range $index, $post := $seriesPosts }}
+                <div class="series-post-item">
+                    <div class="d-flex align-items-center">
+                        <div class="series-post-number">
+                            <span class="series-number-badge">{{ add $index 1 }}</span>
+                        </div>
+                        <div class="flex-auto ml-3">
+                            <h3 class="series-post-title">
+                                <a href="{{ $post.Permalink }}">{{ $post.Title }}</a>
+                            </h3>
+                            <div class="series-post-meta">
+                                <time datetime="{{ $post.Date.Format "2006-01-02" }}">{{ $post.Date.Format "2006년 1월 2일" }}</time>
+                                {{ if $post.Params.tags }}
+                                <div class="series-post-tags">
+                                    {{ range $post.Params.tags }}
+                                    <a href="{{ (printf "/tags/%s/" (urlize .)) | relURL }}" class="series-post-tag">
+                                        <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="12"
+                                            height="12">
+                                            <path fill-rule="evenodd"
+                                                d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                                            </path>
+                                        </svg>
+                                        {{ . }}
+                                    </a>
+                                    {{ end }}
+                                </div>
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+                {{ else }}
+                <div class="text-center py-6">
+                    <h3 class="f4 text-normal">이 시리즈에는 아직 포스트가 없습니다</h3>
+                    <p class="text-gray">시리즈명: "{{ $seriesName }}"</p>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
+
+{{ define "content" }}
+<div class="application-main">
+    {{ partial "user-profile.html" . }}
+</div>
+{{ end }}
