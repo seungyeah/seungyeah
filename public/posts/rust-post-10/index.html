@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko-kr">
-<head><script src="/seungyeah/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=seungyeah/livereload" data-no-instant defer></script>
+<head><script src="/seungyeah/livereload.js?mindelay=10&amp;v=2&amp;port=51652&amp;path=seungyeah/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <script type="application/javascript" src='http://localhost:1313/seungyeah/js/theme-mode.js'></script>
-    <link rel="stylesheet" href='http://localhost:1313/seungyeah/css/frameworks.min.css' />
-    <link rel="stylesheet" href='http://localhost:1313/seungyeah/css/github.min.css' />
-    <link rel="stylesheet" href='http://localhost:1313/seungyeah/css/github-style.css' />
-    <link rel="stylesheet" href='http://localhost:1313/seungyeah/css/light.css' />
-    <link rel="stylesheet" href='http://localhost:1313/seungyeah/css/dark.css' />
-    <link rel="stylesheet" href='http://localhost:1313/seungyeah/css/syntax.css' />
+    <script type="application/javascript" src='http://localhost:51652/seungyeah/js/theme-mode.js'></script>
+    <link rel="stylesheet" href='http://localhost:51652/seungyeah/css/frameworks.min.css' />
+    <link rel="stylesheet" href='http://localhost:51652/seungyeah/css/github.min.css' />
+    <link rel="stylesheet" href='http://localhost:51652/seungyeah/css/github-style.css' />
+    <link rel="stylesheet" href='http://localhost:51652/seungyeah/css/light.css' />
+    <link rel="stylesheet" href='http://localhost:51652/seungyeah/css/dark.css' />
+    <link rel="stylesheet" href='http://localhost:51652/seungyeah/css/syntax.css' />
     <title>Rust 라이프타임 - 승예&#39;s Blog</title>
     
     <link rel="icon" type="image/x-icon" href='images/github-mark.png'>
     
     <meta name="theme-color" content="#1e2327">
 
-    <link rel="stylesheet" href="http://localhost:1313/seungyeah/css/custom.css">
-    <script type="text/javascript" src="http://localhost:1313/seungyeah/js/custom.js"></script>
+    <link rel="stylesheet" href="http://localhost:51652/seungyeah/css/custom.css">
+    <script type="text/javascript" src="http://localhost:51652/seungyeah/js/custom.js"></script>
 
     
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
@@ -30,7 +30,7 @@ fn main() { let r; { let x = 5; r = &amp;x; // 에러! x의 라이프타임이 �
 <meta name="keywords"
   content='blog, tech, programming' />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="http://localhost:1313/seungyeah/posts/rust-post-10/" />
+<link rel="canonical" href="http://localhost:51652/seungyeah/posts/rust-post-10/" />
 
 
 <meta name="twitter:card" content="summary" />
@@ -39,10 +39,10 @@ fn main() { let r; { let x = 5; r = &amp;x; // 에러! x의 라이프타임이 �
   content="라이프타임이란? 라이프타임은 참조가 유효한 스코프를 나타냅니다.
 fn main() { let r; { let x = 5; r = &amp;x; // 에러! x의 라이프타임이 더 짧음 } println!(&#34;r: {}&#34;, r); } 함수에서의 라이프타임 fn longest&lt;&#39;a&gt;(x: &amp;&#39;a str, y: &amp;&#39;a str) -&gt; &amp;&#39;a str { if x.len() &gt; y.len() { x } else { y } } 구조체에서의 라이프타임 struct ImportantExcerpt&lt;&#39;a&gt; { part: &amp;&#39;a str, } impl&lt;&#39;a&gt; ImportantExcerpt&lt;&#39;a&gt; { fn level(&amp;self) -&gt; i32 { 3 } } 라이프타임 생략 규칙 컴파일러가 자동으로 라이프타임을 추론하는 규칙들이 있습니다.
 " />
-<meta name="twitter:site" content="http://localhost:1313/seungyeah/" />
+<meta name="twitter:site" content="http://localhost:51652/seungyeah/" />
 <meta name="twitter:creator" content="" />
 <meta name="twitter:image"
-  content="http://localhost:1313/seungyeah/">
+  content="http://localhost:51652/seungyeah/">
 
 
 <meta property="og:type" content="article" />
@@ -51,10 +51,10 @@ fn main() { let r; { let x = 5; r = &amp;x; // 에러! x의 라이프타임이 �
   content="라이프타임이란? 라이프타임은 참조가 유효한 스코프를 나타냅니다.
 fn main() { let r; { let x = 5; r = &amp;x; // 에러! x의 라이프타임이 더 짧음 } println!(&#34;r: {}&#34;, r); } 함수에서의 라이프타임 fn longest&lt;&#39;a&gt;(x: &amp;&#39;a str, y: &amp;&#39;a str) -&gt; &amp;&#39;a str { if x.len() &gt; y.len() { x } else { y } } 구조체에서의 라이프타임 struct ImportantExcerpt&lt;&#39;a&gt; { part: &amp;&#39;a str, } impl&lt;&#39;a&gt; ImportantExcerpt&lt;&#39;a&gt; { fn level(&amp;self) -&gt; i32 { 3 } } 라이프타임 생략 규칙 컴파일러가 자동으로 라이프타임을 추론하는 규칙들이 있습니다.
 " />
-<meta property="og:url" content="http://localhost:1313/seungyeah/posts/rust-post-10/" />
+<meta property="og:url" content="http://localhost:51652/seungyeah/posts/rust-post-10/" />
 <meta property="og:site_name" content="Rust 라이프타임" />
 <meta property="og:image"
-  content="http://localhost:1313/seungyeah/">
+  content="http://localhost:51652/seungyeah/">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 
@@ -76,7 +76,7 @@ fn main() { let r; { let x = 5; r = &amp;x; // 에러! x의 라이프타임이 �
   <div style="position: relative">
   <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
     <div class="Header-item mobile-none" style="margin-top: -4px; margin-bottom: -4px;">
-      <a class="Header-link" href="http://localhost:1313/seungyeah/">
+      <a class="Header-link" href="http://localhost:51652/seungyeah/">
         <img class="octicon" height="32" width="32" src="images/github-mark-white.png">
       </a>
     </div>
@@ -110,7 +110,7 @@ fn main() { let r; { let x = 5; r = &amp;x; // 에러! x의 라이프타임이 �
     </div>
 
     <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
-      <a class="Header-link " href="http://localhost:1313/seungyeah/">
+      <a class="Header-link " href="http://localhost:51652/seungyeah/">
         <img class="octicon octicon-mark-github v-align-middle" height="32" width="32" src="images/github-mark-white.png">
       </a>
     </div>
@@ -140,17 +140,17 @@ fn main() { let r; { let x = 5; r = &amp;x; // 에러! x의 라이프타임이 �
           <div class="flex-auto min-width-0 width-fit mr-3">
             <div class="d-flex">
               <div class="d-none d-md-block">
-                <a class="avatar mr-2 flex-shrink-0" href="http://localhost:1313/seungyeah/">
+                <a class="avatar mr-2 flex-shrink-0" href="http://localhost:51652/seungyeah/">
                   <img class="avatar-user" src="images/avatar.png" width="32" height="32"></a>
               </div>
               <div class="d-flex flex-column">
                 <h1 class="break-word f3 text-normal mb-md-0 mb-1">
                   <span class="author">
-                    <a href="http://localhost:1313/seungyeah/">승예</a>
+                    <a href="http://localhost:51652/seungyeah/">승예</a>
                   </span>
                   <span class="path-divider">/</span>
                   <strong class="css-truncate css-truncate-target mr-1" style="max-width: 410px">
-                    <a href="http://localhost:1313/seungyeah/posts/rust-post-10/">Rust 라이프타임</a>
+                    <a href="http://localhost:51652/seungyeah/posts/rust-post-10/">Rust 라이프타임</a>
                   </strong>
                 </h1>
                 <div class="note m-0">
@@ -298,7 +298,7 @@ fn main() { let r; { let x = 5; r = &amp;x; // 에러! x의 라이프타임이 �
                     <div class="post-data-item" 
                          data-index="0"
                          data-title="Rust 소개 및 환경 설정"
-                         data-permalink="http://localhost:1313/seungyeah/posts/third-post/"
+                         data-permalink="http://localhost:51652/seungyeah/posts/third-post/"
                          data-date="2024.01.02"
                          data-is-current="false">
                     </div>
@@ -306,7 +306,7 @@ fn main() { let r; { let x = 5; r = &amp;x; // 에러! x의 라이프타임이 �
                     <div class="post-data-item" 
                          data-index="1"
                          data-title="Rust 소개 및 환경 설정2"
-                         data-permalink="http://localhost:1313/seungyeah/posts/third-post2/"
+                         data-permalink="http://localhost:51652/seungyeah/posts/third-post2/"
                          data-date="2024.01.02"
                          data-is-current="false">
                     </div>
@@ -314,7 +314,7 @@ fn main() { let r; { let x = 5; r = &amp;x; // 에러! x의 라이프타임이 �
                     <div class="post-data-item" 
                          data-index="2"
                          data-title="Rust 기본 문법 - 변수와 타입"
-                         data-permalink="http://localhost:1313/seungyeah/posts/rust-post-3/"
+                         data-permalink="http://localhost:51652/seungyeah/posts/rust-post-3/"
                          data-date="2024.01.03"
                          data-is-current="false">
                     </div>
@@ -322,7 +322,7 @@ fn main() { let r; { let x = 5; r = &amp;x; // 에러! x의 라이프타임이 �
                     <div class="post-data-item" 
                          data-index="3"
                          data-title="Rust 소유권 시스템 이해하기"
-                         data-permalink="http://localhost:1313/seungyeah/posts/rust-post-4/"
+                         data-permalink="http://localhost:51652/seungyeah/posts/rust-post-4/"
                          data-date="2024.01.04"
                          data-is-current="false">
                     </div>
@@ -330,7 +330,7 @@ fn main() { let r; { let x = 5; r = &amp;x; // 에러! x의 라이프타임이 �
                     <div class="post-data-item" 
                          data-index="4"
                          data-title="Rust 참조와 차용"
-                         data-permalink="http://localhost:1313/seungyeah/posts/rust-post-5/"
+                         data-permalink="http://localhost:51652/seungyeah/posts/rust-post-5/"
                          data-date="2024.01.05"
                          data-is-current="false">
                     </div>
@@ -338,7 +338,7 @@ fn main() { let r; { let x = 5; r = &amp;x; // 에러! x의 라이프타임이 �
                     <div class="post-data-item" 
                          data-index="5"
                          data-title="Rust 구조체와 메소드"
-                         data-permalink="http://localhost:1313/seungyeah/posts/rust-post-6/"
+                         data-permalink="http://localhost:51652/seungyeah/posts/rust-post-6/"
                          data-date="2024.01.06"
                          data-is-current="false">
                     </div>
@@ -346,7 +346,7 @@ fn main() { let r; { let x = 5; r = &amp;x; // 에러! x의 라이프타임이 �
                     <div class="post-data-item" 
                          data-index="6"
                          data-title="Rust 열거형과 패턴 매칭"
-                         data-permalink="http://localhost:1313/seungyeah/posts/rust-post-7/"
+                         data-permalink="http://localhost:51652/seungyeah/posts/rust-post-7/"
                          data-date="2024.01.07"
                          data-is-current="false">
                     </div>
@@ -354,7 +354,7 @@ fn main() { let r; { let x = 5; r = &amp;x; // 에러! x의 라이프타임이 �
                     <div class="post-data-item" 
                          data-index="7"
                          data-title="Rust 에러 처리"
-                         data-permalink="http://localhost:1313/seungyeah/posts/rust-post-8/"
+                         data-permalink="http://localhost:51652/seungyeah/posts/rust-post-8/"
                          data-date="2024.01.08"
                          data-is-current="false">
                     </div>
@@ -362,7 +362,7 @@ fn main() { let r; { let x = 5; r = &amp;x; // 에러! x의 라이프타임이 �
                     <div class="post-data-item" 
                          data-index="8"
                          data-title="Rust 제네릭과 트레이트"
-                         data-permalink="http://localhost:1313/seungyeah/posts/rust-post-9/"
+                         data-permalink="http://localhost:51652/seungyeah/posts/rust-post-9/"
                          data-date="2024.01.09"
                          data-is-current="false">
                     </div>
@@ -370,7 +370,7 @@ fn main() { let r; { let x = 5; r = &amp;x; // 에러! x의 라이프타임이 �
                     <div class="post-data-item" 
                          data-index="9"
                          data-title="Rust 라이프타임"
-                         data-permalink="http://localhost:1313/seungyeah/posts/rust-post-10/"
+                         data-permalink="http://localhost:51652/seungyeah/posts/rust-post-10/"
                          data-date="2024.01.10"
                          data-is-current="true">
                     </div>
@@ -378,7 +378,7 @@ fn main() { let r; { let x = 5; r = &amp;x; // 에러! x의 라이프타임이 �
                     <div class="post-data-item" 
                          data-index="10"
                          data-title="Rust 컬렉션: 벡터, 문자열, 해시맵"
-                         data-permalink="http://localhost:1313/seungyeah/posts/rust-post-11/"
+                         data-permalink="http://localhost:51652/seungyeah/posts/rust-post-11/"
                          data-date="2024.01.11"
                          data-is-current="false">
                     </div>
@@ -386,7 +386,7 @@ fn main() { let r; { let x = 5; r = &amp;x; // 에러! x의 라이프타임이 �
                     <div class="post-data-item" 
                          data-index="11"
                          data-title="Rust 클로저와 이터레이터"
-                         data-permalink="http://localhost:1313/seungyeah/posts/rust-post-12/"
+                         data-permalink="http://localhost:51652/seungyeah/posts/rust-post-12/"
                          data-date="2024.01.12"
                          data-is-current="false">
                     </div>
@@ -442,8 +442,8 @@ fn main() { let r; { let x = 5; r = &amp;x; // 에러! x의 라이프타임이 �
     </div>
   </main>
 </div>
-<script type="application/javascript" src='http://localhost:1313/seungyeah/js/toc.js'></script>
-<link rel="stylesheet" href='http://localhost:1313/seungyeah/css/toc.css' />
+<script type="application/javascript" src='http://localhost:51652/seungyeah/js/toc.js'></script>
+<link rel="stylesheet" href='http://localhost:51652/seungyeah/css/toc.css' />
 <script>
   
   let seriesCurrentPage = 0;
@@ -620,7 +620,7 @@ fn main() { let r; { let x = 5; r = &amp;x; // 에러! x의 라이프타임이 �
   <div class="footer container-xl width-full p-responsive">
   <div
     class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
-    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mr-lg-4" href="http://localhost:1313/seungyeah/">
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mr-lg-4" href="http://localhost:51652/seungyeah/">
       <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24">
         <path fill-rule="evenodd"
           d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
@@ -643,14 +643,14 @@ fn main() { let r; { let x = 5; r = &amp;x; // 에러! x의 라이프타임이 �
 
 </body>
 
-<script type="application/javascript" src="http://localhost:1313/seungyeah/js/github-style.js"></script>
+<script type="application/javascript" src="http://localhost:51652/seungyeah/js/github-style.js"></script>
 
 
 
 
 
 <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
-<script type="application/javascript" src='http://localhost:1313/seungyeah/js/search.js'></script>
+<script type="application/javascript" src='http://localhost:51652/seungyeah/js/search.js'></script>
 
 
 

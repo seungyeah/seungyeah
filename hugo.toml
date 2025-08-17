@@ -1,4 +1,4 @@
-baseURL = "https://seungyeah.github.io/seungyeah/"
+baseURL = "https://seungyeah.github.io/seungyeah"
 languageCode = "ko-kr"
 title = "승예's Blog"
 pygmentsCodeFences = true

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ownership on 승예&#39;s Blog</title>
-    <link>http://localhost:1313/seungyeah/tags/ownership/</link>
+    <link>http://localhost:51652/seungyeah/tags/ownership/</link>
     <description>Recent content in Ownership on 승예&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <lastBuildDate>Mon, 18 Aug 2025 01:03:25 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/seungyeah/tags/ownership/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:51652/seungyeah/tags/ownership/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rust 소유권 시스템 이해하기</title>
-      <link>http://localhost:1313/seungyeah/posts/rust-post-4/</link>
+      <link>http://localhost:51652/seungyeah/posts/rust-post-4/</link>
       <pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/seungyeah/posts/rust-post-4/</guid>
+      <guid>http://localhost:51652/seungyeah/posts/rust-post-4/</guid>
       <description>&lt;h2 id=&#34;소유권이란&#34;&gt;소유권이란?&lt;/h2&gt;&#xA;&lt;p&gt;소유권(Ownership)은 Rust의 핵심 특징으로, 메모리 안전성을 보장하면서도 가비지 컬렉터 없이 메모리를 관리할 수 있게 해줍니다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;소유권-규칙&#34;&gt;소유권 규칙&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Rust의 각 값은 소유자(owner)를 가집니다.&lt;/li&gt;&#xA;&lt;li&gt;한 번에 딱 하나의 소유자만 존재할 수 있습니다.&lt;/li&gt;&#xA;&lt;li&gt;소유자가 스코프를 벗어나면, 값이 버려집니다.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;move-의미론&#34;&gt;Move 의미론&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; s1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; String::from(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; s2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; s1; &lt;span style=&#34;color:#75715e&#34;&gt;// s1이 s2로 move됨&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// println!(&amp;#34;{}&amp;#34;, s1); // 에러! s1은 더 이상 유효하지 않음&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;clone을-이용한-복사&#34;&gt;Clone을 이용한 복사&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; s1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; String::from(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; s2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; s1.clone(); &lt;span style=&#34;color:#75715e&#34;&gt;// 깊은 복사&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;println!&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;, &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, s1, s2); &lt;span style=&#34;color:#75715e&#34;&gt;// 정상 작동&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
   </channel>
