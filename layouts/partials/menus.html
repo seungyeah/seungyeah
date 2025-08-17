@@ -1,6 +1,6 @@
 {{ $section := where .Site.RegularPages "Section" "in" (slice "posts") }}
 {{ $section_count := len $section }}
-{{ $series_count := len .Site.Taxonomies.series }}
+{{ $series_count := default 0 (len .Site.Taxonomies.series) }}
 
 {{ $isSeriesPage := or (eq .Section "series") (and (in (slice "taxonomy" "term" "taxonomyTerm") .Kind) (eq .Data.Plural
 "series")) }}
