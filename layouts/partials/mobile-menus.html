@@ -18,7 +18,7 @@
       </svg>
       Overview
     </a>
-    <a class='UnderlineNav-item {{ if $isPostsPage }} selected {{ end }}' href="/posts/">
+    <a class='UnderlineNav-item {{ if $isPostsPage }} selected {{ end }}' href="{{ .Site.BaseURL }}/posts/">
       <svg class="octicon octicon-repo UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16" version="1.1"
         width="16">
         <path fill-rule="evenodd"
@@ -28,7 +28,7 @@
       Posts
       <span class="Counter ">{{ $section_count}}</span>
     </a>
-    <a class='UnderlineNav-item {{ if $isSeriesPage }} selected {{ end }}' href="/series/">
+    <a class='UnderlineNav-item {{ if $isSeriesPage }} selected {{ end }}' href="{{ .Site.BaseURL }}/series/">
       <svg class="octicon octicon-package UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16" version="1.1"
         width="16">
         <path fill-rule="evenodd"
