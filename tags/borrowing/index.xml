@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Borrowing on 승예's Blog</title><link>https://seungyeah.github.io/tags/borrowing/</link><description>Recent content in Borrowing on 승예's Blog</description><generator>Hugo</generator><language>ko-kr</language><lastBuildDate>Mon, 18 Aug 2025 03:58:34 +0900</lastBuildDate><atom:link href="https://seungyeah.github.io/tags/borrowing/index.xml" rel="self" type="application/rss+xml"/><item><title>Rust 참조와 차용</title><link>https://seungyeah.github.io/posts/rust-post-5/</link><pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate><guid>https://seungyeah.github.io/posts/rust-post-5/</guid><description>&lt;h2 id="참조란">참조란?&lt;/h2>
+&lt;p>참조(Reference)는 값을 소유하지 않고 해당 값을 가리키는 방법입니다.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-rust" data-lang="rust">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">fn&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">let&lt;/span> s1 &lt;span style="color:#f92672">=&lt;/span> String::from(&lt;span style="color:#e6db74">&amp;#34;hello&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">let&lt;/span> len &lt;span style="color:#f92672">=&lt;/span> calculate_length(&lt;span style="color:#f92672">&amp;amp;&lt;/span>s1);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">println!&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;The length of &amp;#39;&lt;/span>&lt;span style="color:#e6db74">{}&lt;/span>&lt;span style="color:#e6db74">&amp;#39; is &lt;/span>&lt;span style="color:#e6db74">{}&lt;/span>&lt;span style="color:#e6db74">.&amp;#34;&lt;/span>, s1, len);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">fn&lt;/span> &lt;span style="color:#a6e22e">calculate_length&lt;/span>(s: &lt;span style="color:#66d9ef">&amp;amp;&lt;/span>String) -&amp;gt; &lt;span style="color:#66d9ef">usize&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> s.len()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="가변-참조">가변 참조&lt;/h2>
+&lt;p>값을 변경하려면 가변 참조를 사용해야 합니다.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-rust" data-lang="rust">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">fn&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#66d9ef">mut&lt;/span> s &lt;span style="color:#f92672">=&lt;/span> String::from(&lt;span style="color:#e6db74">&amp;#34;hello&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> change(&lt;span style="color:#f92672">&amp;amp;&lt;/span>&lt;span style="color:#66d9ef">mut&lt;/span> s);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">fn&lt;/span> &lt;span style="color:#a6e22e">change&lt;/span>(some_string: &lt;span style="color:#66d9ef">&amp;amp;&lt;/span>&lt;span style="color:#a6e22e">mut&lt;/span> String) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> some_string.push_str(&lt;span style="color:#e6db74">&amp;#34;, world&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="참조-규칙">참조 규칙&lt;/h2>
+&lt;ol>
+&lt;li>어느 시점에서든 하나의 가변 참조 또는 여러 개의 불변 참조를 가질 수 있습니다.&lt;/li>
+&lt;li>참조는 항상 유효해야 합니다.&lt;/li>
+&lt;/ol></description></item></channel></rss>

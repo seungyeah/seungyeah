@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Systems on 승예's Blog</title><link>https://seungyeah.github.io/tags/systems/</link><description>Recent content in Systems on 승예's Blog</description><generator>Hugo</generator><language>ko-kr</language><lastBuildDate>Mon, 18 Aug 2025 03:58:34 +0900</lastBuildDate><atom:link href="https://seungyeah.github.io/tags/systems/index.xml" rel="self" type="application/rss+xml"/><item><title>Rust 소개 및 환경 설정</title><link>https://seungyeah.github.io/posts/third-post/</link><pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate><guid>https://seungyeah.github.io/posts/third-post/</guid><description>&lt;h2 id="소개">소개&lt;/h2>
+&lt;p>안녕하세요! Rust 완벽 가이드 시리즈의 첫 번째 글입니다. 이 글에서는 Rust 언어에 대한 기본적인 소개와 개발 환경 설정 방법에 대해 알아보겠습니다.&lt;/p>
+&lt;h2 id="rust란">Rust란?&lt;/h2>
+&lt;p>Rust는 Mozilla에서 개발한 시스템 프로그래밍 언어입니다. 2010년에 처음 공개되었으며, 2015년에 1.0 버전이 릴리스되었습니다.&lt;/p>
+&lt;h3 id="rust의-특징">Rust의 특징&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>메모리 안전성&lt;/strong>: 컴파일 타임에 메모리 관련 버그를 방지&lt;/li>
+&lt;li>&lt;strong>동시성 안전성&lt;/strong>: 데이터 레이스 없이 안전한 동시성 프로그래밍&lt;/li>
+&lt;li>&lt;strong>제로 코스트 추상화&lt;/strong>: 고수준 추상화가 런타임 오버헤드 없음&lt;/li>
+&lt;li>&lt;strong>C/C++ 수준의 성능&lt;/strong>: 시스템 프로그래밍에 적합한 성능&lt;/li>
+&lt;/ul>
+&lt;h2 id="왜-rust를-배워야-할까">왜 Rust를 배워야 할까?&lt;/h2>
+&lt;h3 id="1-메모리-안전성">1. 메모리 안전성&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-rust" data-lang="rust">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">fn&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#66d9ef">mut&lt;/span> v &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">vec!&lt;/span>[&lt;span style="color:#ae81ff">1&lt;/span>, &lt;span style="color:#ae81ff">2&lt;/span>, &lt;span style="color:#ae81ff">3&lt;/span>];
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">let&lt;/span> first &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#f92672">&amp;amp;&lt;/span>v[&lt;span style="color:#ae81ff">0&lt;/span>]; &lt;span style="color:#75715e">// 불변 참조
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> v.push(&lt;span style="color:#ae81ff">4&lt;/span>); &lt;span style="color:#75715e">// 컴파일 에러! 가변 참조와 불변 참조 동시 사용 불가
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#a6e22e">println!&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;First: &lt;/span>&lt;span style="color:#e6db74">{}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>, first);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>위 코드는 컴파일되지 않습니다. Rust의 소유권 시스템이 런타임 에러를 컴파일 타임에 방지합니다.&lt;/p></description></item><item><title>Rust 소개 및 환경 설정2</title><link>https://seungyeah.github.io/posts/third-post2/</link><pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate><guid>https://seungyeah.github.io/posts/third-post2/</guid><description>&lt;h2 id="소개">소개&lt;/h2>
+&lt;p>안녕하세요! Rust 완벽 가이드 시리즈의 첫 번째 글입니다. 이 글에서는 Rust 언어에 대한 기본적인 소개와 개발 환경 설정 방법에 대해 알아보겠습니다.&lt;/p>
+&lt;h2 id="rust란">Rust란?&lt;/h2>
+&lt;p>Rust는 Mozilla에서 개발한 시스템 프로그래밍 언어입니다. 2010년에 처음 공개되었으며, 2015년에 1.0 버전이 릴리스되었습니다.&lt;/p>
+&lt;h3 id="rust의-특징">Rust의 특징&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>메모리 안전성&lt;/strong>: 컴파일 타임에 메모리 관련 버그를 방지&lt;/li>
+&lt;li>&lt;strong>동시성 안전성&lt;/strong>: 데이터 레이스 없이 안전한 동시성 프로그래밍&lt;/li>
+&lt;li>&lt;strong>제로 코스트 추상화&lt;/strong>: 고수준 추상화가 런타임 오버헤드 없음&lt;/li>
+&lt;li>&lt;strong>C/C++ 수준의 성능&lt;/strong>: 시스템 프로그래밍에 적합한 성능&lt;/li>
+&lt;/ul>
+&lt;h2 id="왜-rust를-배워야-할까">왜 Rust를 배워야 할까?&lt;/h2>
+&lt;h3 id="1-메모리-안전성">1. 메모리 안전성&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-rust" data-lang="rust">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">fn&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#66d9ef">mut&lt;/span> v &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">vec!&lt;/span>[&lt;span style="color:#ae81ff">1&lt;/span>, &lt;span style="color:#ae81ff">2&lt;/span>, &lt;span style="color:#ae81ff">3&lt;/span>];
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">let&lt;/span> first &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#f92672">&amp;amp;&lt;/span>v[&lt;span style="color:#ae81ff">0&lt;/span>]; &lt;span style="color:#75715e">// 불변 참조
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> v.push(&lt;span style="color:#ae81ff">4&lt;/span>); &lt;span style="color:#75715e">// 컴파일 에러! 가변 참조와 불변 참조 동시 사용 불가
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#a6e22e">println!&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;First: &lt;/span>&lt;span style="color:#e6db74">{}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>, first);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>위 코드는 컴파일되지 않습니다. Rust의 소유권 시스템이 런타임 에러를 컴파일 타임에 방지합니다.&lt;/p></description></item><item><title>Rust 프로그래밍</title><link>https://seungyeah.github.io/series/rust-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://seungyeah.github.io/series/rust-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/</guid><description>&lt;p>Rust 언어의 기초부터 고급 주제까지 다루는 시리즈입니다.&lt;/p></description></item></channel></rss>
