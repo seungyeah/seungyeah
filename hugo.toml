@@ -33,11 +33,11 @@ pygmentsUseClasses = true
 [menu]
   [[menu.main]]
     name = "Posts"
-    url = "posts/"
+    url = "https://seungyeah.github.io/seungyeah/posts/"
     weight = 10
   [[menu.main]]
     name = "Series"
-    url = "series/"
+    url = "https://seungyeah.github.io/seungyeah/series/"
     weight = 10  
 
 [services]
