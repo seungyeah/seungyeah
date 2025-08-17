@@ -1,0 +1,29 @@
+{
+  "editor.formatOnSave": false,
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": false,
+  "files.associations": {
+    "*.html": "html"
+  },
+  "[html]": {
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false,
+    "editor.defaultFormatter": null
+  },
+  "emmet.includeLanguages": {
+    "html": "html"
+  },
+  "files.exclude": {
+    "**/public": true,
+    "**/resources": true
+  },
+  "search.exclude": {
+    "**/public": true,
+    "**/resources": true
+  },
+  "files.watcherExclude": {
+    "**/public/**": true,
+    "**/resources/**": true
+  }
+}
