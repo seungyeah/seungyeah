@@ -44,12 +44,6 @@ pygmentsUseClasses = true
   [services.googleAnalytics]
     ID = ""
 
-    [outputFormats.json]
-  mediaType = "application/json"
-  baseName = "index"
-  isPlainText = false
-
-
 [outputs]
   home = ["html", "json"]
 
