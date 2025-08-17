@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming on 승예's Blog</title><link>http://localhost:1313/tags/programming/</link><description>Recent content in Programming on 승예's Blog</description><generator>Hugo</generator><language>ko-kr</language><lastBuildDate>Mon, 18 Aug 2025 01:03:25 +0900</lastBuildDate><atom:link href="http://localhost:1313/tags/programming/index.xml" rel="self" type="application/rss+xml"/><item><title>Rust 클로저와 이터레이터</title><link>http://localhost:1313/posts/rust-post-12/</link><pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/rust-post-12/</guid><description>&lt;h2 id="클로저">클로저&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming on 승예's Blog</title><link>https://seungyeah.github.io/seungyeah/tags/programming/</link><description>Recent content in Programming on 승예's Blog</description><generator>Hugo</generator><language>ko-kr</language><lastBuildDate>Mon, 18 Aug 2025 01:03:25 +0900</lastBuildDate><atom:link href="https://seungyeah.github.io/seungyeah/tags/programming/index.xml" rel="self" type="application/rss+xml"/><item><title>Rust 클로저와 이터레이터</title><link>https://seungyeah.github.io/seungyeah/posts/rust-post-12/</link><pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate><guid>https://seungyeah.github.io/seungyeah/posts/rust-post-12/</guid><description>&lt;h2 id="클로저">클로저&lt;/h2>
 &lt;p>클로저는 익명 함수로, 환경의 변수를 캡처할 수 있습니다.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-rust" data-lang="rust">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">let&lt;/span> expensive_closure &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#f92672">|&lt;/span>num&lt;span style="color:#f92672">|&lt;/span> {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">println!&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;calculating slowly...&amp;#34;&lt;/span>);
@@ -25,7 +25,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">let&lt;/span> filtered: Vec&lt;span style="color:#f92672">&amp;lt;&lt;/span>_&lt;span style="color:#f92672">&amp;gt;&lt;/span> &lt;span style="color:#f92672">=&lt;/span> v1.iter()
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .filter(&lt;span style="color:#f92672">|&amp;amp;&lt;/span>x&lt;span style="color:#f92672">|&lt;/span> &lt;span style="color:#f92672">*&lt;/span>x &lt;span style="color:#f92672">&amp;gt;&lt;/span> &lt;span style="color:#ae81ff">1&lt;/span>)
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .collect();
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Rust 컬렉션: 벡터, 문자열, 해시맵</title><link>http://localhost:1313/posts/rust-post-11/</link><pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/rust-post-11/</guid><description>&lt;h2 id="벡터-vector">벡터 (Vector)&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Rust 컬렉션: 벡터, 문자열, 해시맵</title><link>https://seungyeah.github.io/seungyeah/posts/rust-post-11/</link><pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate><guid>https://seungyeah.github.io/seungyeah/posts/rust-post-11/</guid><description>&lt;h2 id="벡터-vector">벡터 (Vector)&lt;/h2>
 &lt;p>벡터는 같은 타입의 값들을 저장하는 가변 크기 배열입니다.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-rust" data-lang="rust">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#66d9ef">mut&lt;/span> v &lt;span style="color:#f92672">=&lt;/span> Vec::new();
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>v.push(&lt;span style="color:#ae81ff">5&lt;/span>);
@@ -54,7 +54,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">let&lt;/span> team_name &lt;span style="color:#f92672">=&lt;/span> String::from(&lt;span style="color:#e6db74">&amp;#34;Blue&amp;#34;&lt;/span>);
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">let&lt;/span> score &lt;span style="color:#f92672">=&lt;/span> scores.get(&lt;span style="color:#f92672">&amp;amp;&lt;/span>team_name);
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Rust 라이프타임</title><link>http://localhost:1313/posts/rust-post-10/</link><pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/rust-post-10/</guid><description>&lt;h2 id="라이프타임이란">라이프타임이란?&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Rust 라이프타임</title><link>https://seungyeah.github.io/seungyeah/posts/rust-post-10/</link><pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate><guid>https://seungyeah.github.io/seungyeah/posts/rust-post-10/</guid><description>&lt;h2 id="라이프타임이란">라이프타임이란?&lt;/h2>
 &lt;p>라이프타임은 참조가 유효한 스코프를 나타냅니다.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-rust" data-lang="rust">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">fn&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>() {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">let&lt;/span> r;
@@ -85,7 +85,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="라이프타임-생략-규칙">라이프타임 생략 규칙&lt;/h2>
-&lt;p>컴파일러가 자동으로 라이프타임을 추론하는 규칙들이 있습니다.&lt;/p></description></item><item><title>Rust 제네릭과 트레이트</title><link>http://localhost:1313/posts/rust-post-9/</link><pubDate>Tue, 09 Jan 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/rust-post-9/</guid><description>&lt;h2 id="제네릭-타입">제네릭 타입&lt;/h2>
+&lt;p>컴파일러가 자동으로 라이프타임을 추론하는 규칙들이 있습니다.&lt;/p></description></item><item><title>Rust 제네릭과 트레이트</title><link>https://seungyeah.github.io/seungyeah/posts/rust-post-9/</link><pubDate>Tue, 09 Jan 2024 00:00:00 +0000</pubDate><guid>https://seungyeah.github.io/seungyeah/posts/rust-post-9/</guid><description>&lt;h2 id="제네릭-타입">제네릭 타입&lt;/h2>
 &lt;p>제네릭을 사용하면 코드 중복을 줄이고 재사용성을 높일 수 있습니다.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-rust" data-lang="rust">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">fn&lt;/span> &lt;span style="color:#a6e22e">largest&lt;/span>&lt;span style="color:#f92672">&amp;lt;&lt;/span>T: PartialOrd&lt;span style="color:#f92672">&amp;gt;&lt;/span>(list: &lt;span style="color:#66d9ef">&amp;amp;&lt;/span>[T]) -&amp;gt; &lt;span style="color:#66d9ef">&amp;amp;&lt;/span>&lt;span style="color:#a6e22e">T&lt;/span> {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#66d9ef">mut&lt;/span> largest &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#f92672">&amp;amp;&lt;/span>list[&lt;span style="color:#ae81ff">0&lt;/span>];
@@ -120,7 +120,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">format!&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;&lt;/span>&lt;span style="color:#e6db74">{}&lt;/span>&lt;span style="color:#e6db74">, by &lt;/span>&lt;span style="color:#e6db74">{}&lt;/span>&lt;span style="color:#e6db74"> (&lt;/span>&lt;span style="color:#e6db74">{}&lt;/span>&lt;span style="color:#e6db74">)&amp;#34;&lt;/span>, self.headline, self.author, self.location)
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Rust 에러 처리</title><link>http://localhost:1313/posts/rust-post-8/</link><pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/rust-post-8/</guid><description>&lt;h2 id="panic과-복구-불가능한-에러">panic!과 복구 불가능한 에러&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Rust 에러 처리</title><link>https://seungyeah.github.io/seungyeah/posts/rust-post-8/</link><pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate><guid>https://seungyeah.github.io/seungyeah/posts/rust-post-8/</guid><description>&lt;h2 id="panic과-복구-불가능한-에러">panic!과 복구 불가능한 에러&lt;/h2>
 &lt;p>프로그램이 복구할 수 없는 상태에 도달했을 때 &lt;code>panic!&lt;/code> 매크로를 사용합니다.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-rust" data-lang="rust">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">fn&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>() {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">panic!&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;crash and burn&amp;#34;&lt;/span>);
@@ -140,7 +140,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> };
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="-연산자">? 연산자&lt;/h2>
-&lt;p>&lt;code>?&lt;/code> 연산자를 사용하면 에러 처리를 간단하게 할 수 있습니다.&lt;/p></description></item><item><title>Rust 열거형과 패턴 매칭</title><link>http://localhost:1313/posts/rust-post-7/</link><pubDate>Sun, 07 Jan 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/rust-post-7/</guid><description>&lt;h2 id="열거형-정의">열거형 정의&lt;/h2>
+&lt;p>&lt;code>?&lt;/code> 연산자를 사용하면 에러 처리를 간단하게 할 수 있습니다.&lt;/p></description></item><item><title>Rust 열거형과 패턴 매칭</title><link>https://seungyeah.github.io/seungyeah/posts/rust-post-7/</link><pubDate>Sun, 07 Jan 2024 00:00:00 +0000</pubDate><guid>https://seungyeah.github.io/seungyeah/posts/rust-post-7/</guid><description>&lt;h2 id="열거형-정의">열거형 정의&lt;/h2>
 &lt;p>열거형은 하나의 타입이 여러 가지 값 중 하나를 가질 수 있을 때 사용합니다.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-rust" data-lang="rust">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">enum&lt;/span> &lt;span style="color:#a6e22e">IpAddrKind&lt;/span> {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> V4,
@@ -169,7 +169,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Coin::Quarter &lt;span style="color:#f92672">=&amp;gt;&lt;/span> &lt;span style="color:#ae81ff">25&lt;/span>,
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Rust 구조체와 메소드</title><link>http://localhost:1313/posts/rust-post-6/</link><pubDate>Sat, 06 Jan 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/rust-post-6/</guid><description>&lt;h2 id="구조체-정의">구조체 정의&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Rust 구조체와 메소드</title><link>https://seungyeah.github.io/seungyeah/posts/rust-post-6/</link><pubDate>Sat, 06 Jan 2024 00:00:00 +0000</pubDate><guid>https://seungyeah.github.io/seungyeah/posts/rust-post-6/</guid><description>&lt;h2 id="구조체-정의">구조체 정의&lt;/h2>
 &lt;p>구조체는 관련있는 데이터를 하나로 묶는 커스텀 데이터 타입입니다.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-rust" data-lang="rust">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">struct&lt;/span> &lt;span style="color:#a6e22e">User&lt;/span> {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> username: String,
@@ -195,7 +195,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> self.active &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">false&lt;/span>;
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Rust 참조와 차용</title><link>http://localhost:1313/posts/rust-post-5/</link><pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/rust-post-5/</guid><description>&lt;h2 id="참조란">참조란?&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Rust 참조와 차용</title><link>https://seungyeah.github.io/seungyeah/posts/rust-post-5/</link><pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate><guid>https://seungyeah.github.io/seungyeah/posts/rust-post-5/</guid><description>&lt;h2 id="참조란">참조란?&lt;/h2>
 &lt;p>참조(Reference)는 값을 소유하지 않고 해당 값을 가리키는 방법입니다.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-rust" data-lang="rust">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">fn&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>() {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">let&lt;/span> s1 &lt;span style="color:#f92672">=&lt;/span> String::from(&lt;span style="color:#e6db74">&amp;#34;hello&amp;#34;&lt;/span>);
@@ -220,7 +220,7 @@
 &lt;ol>
 &lt;li>어느 시점에서든 하나의 가변 참조 또는 여러 개의 불변 참조를 가질 수 있습니다.&lt;/li>
 &lt;li>참조는 항상 유효해야 합니다.&lt;/li>
-&lt;/ol></description></item><item><title>Rust 소유권 시스템 이해하기</title><link>http://localhost:1313/posts/rust-post-4/</link><pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/rust-post-4/</guid><description>&lt;h2 id="소유권이란">소유권이란?&lt;/h2>
+&lt;/ol></description></item><item><title>Rust 소유권 시스템 이해하기</title><link>https://seungyeah.github.io/seungyeah/posts/rust-post-4/</link><pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate><guid>https://seungyeah.github.io/seungyeah/posts/rust-post-4/</guid><description>&lt;h2 id="소유권이란">소유권이란?&lt;/h2>
 &lt;p>소유권(Ownership)은 Rust의 핵심 특징으로, 메모리 안전성을 보장하면서도 가비지 컬렉터 없이 메모리를 관리할 수 있게 해줍니다.&lt;/p>
 &lt;h2 id="소유권-규칙">소유권 규칙&lt;/h2>
 &lt;ol>
@@ -236,7 +236,7 @@
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-rust" data-lang="rust">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">let&lt;/span> s1 &lt;span style="color:#f92672">=&lt;/span> String::from(&lt;span style="color:#e6db74">&amp;#34;hello&amp;#34;&lt;/span>);
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">let&lt;/span> s2 &lt;span style="color:#f92672">=&lt;/span> s1.clone(); &lt;span style="color:#75715e">// 깊은 복사
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#a6e22e">println!&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;&lt;/span>&lt;span style="color:#e6db74">{}&lt;/span>&lt;span style="color:#e6db74">, &lt;/span>&lt;span style="color:#e6db74">{}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>, s1, s2); &lt;span style="color:#75715e">// 정상 작동
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Rust 기본 문법 - 변수와 타입</title><link>http://localhost:1313/posts/rust-post-3/</link><pubDate>Wed, 03 Jan 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/rust-post-3/</guid><description>&lt;h2 id="변수와-불변성">변수와 불변성&lt;/h2>
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Rust 기본 문법 - 변수와 타입</title><link>https://seungyeah.github.io/seungyeah/posts/rust-post-3/</link><pubDate>Wed, 03 Jan 2024 00:00:00 +0000</pubDate><guid>https://seungyeah.github.io/seungyeah/posts/rust-post-3/</guid><description>&lt;h2 id="변수와-불변성">변수와 불변성&lt;/h2>
 &lt;p>Rust에서 변수는 기본적으로 불변(immutable)입니다.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-rust" data-lang="rust">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">let&lt;/span> x &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">5&lt;/span>;
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// x = 6; // 에러! 불변 변수는 재할당할 수 없습니다.
@@ -262,7 +262,7 @@
 &lt;h3 id="문자-타입">문자 타입&lt;/h3>
 &lt;ul>
 &lt;li>&lt;code>char&lt;/code> (4바이트 유니코드 스칼라 값)&lt;/li>
-&lt;/ul></description></item><item><title>Rust 소개 및 환경 설정</title><link>http://localhost:1313/posts/third-post/</link><pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/third-post/</guid><description>&lt;h2 id="소개">소개&lt;/h2>
+&lt;/ul></description></item><item><title>Rust 소개 및 환경 설정</title><link>https://seungyeah.github.io/seungyeah/posts/third-post/</link><pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate><guid>https://seungyeah.github.io/seungyeah/posts/third-post/</guid><description>&lt;h2 id="소개">소개&lt;/h2>
 &lt;p>안녕하세요! Rust 완벽 가이드 시리즈의 첫 번째 글입니다. 이 글에서는 Rust 언어에 대한 기본적인 소개와 개발 환경 설정 방법에 대해 알아보겠습니다.&lt;/p>
 &lt;h2 id="rust란">Rust란?&lt;/h2>
 &lt;p>Rust는 Mozilla에서 개발한 시스템 프로그래밍 언어입니다. 2010년에 처음 공개되었으며, 2015년에 1.0 버전이 릴리스되었습니다.&lt;/p>
@@ -281,7 +281,7 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> v.push(&lt;span style="color:#ae81ff">4&lt;/span>); &lt;span style="color:#75715e">// 컴파일 에러! 가변 참조와 불변 참조 동시 사용 불가
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#a6e22e">println!&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;First: &lt;/span>&lt;span style="color:#e6db74">{}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>, first);
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>위 코드는 컴파일되지 않습니다. Rust의 소유권 시스템이 런타임 에러를 컴파일 타임에 방지합니다.&lt;/p></description></item><item><title>Rust 소개 및 환경 설정2</title><link>http://localhost:1313/posts/third-post2/</link><pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/third-post2/</guid><description>&lt;h2 id="소개">소개&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>위 코드는 컴파일되지 않습니다. Rust의 소유권 시스템이 런타임 에러를 컴파일 타임에 방지합니다.&lt;/p></description></item><item><title>Rust 소개 및 환경 설정2</title><link>https://seungyeah.github.io/seungyeah/posts/third-post2/</link><pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate><guid>https://seungyeah.github.io/seungyeah/posts/third-post2/</guid><description>&lt;h2 id="소개">소개&lt;/h2>
 &lt;p>안녕하세요! Rust 완벽 가이드 시리즈의 첫 번째 글입니다. 이 글에서는 Rust 언어에 대한 기본적인 소개와 개발 환경 설정 방법에 대해 알아보겠습니다.&lt;/p>
 &lt;h2 id="rust란">Rust란?&lt;/h2>
 &lt;p>Rust는 Mozilla에서 개발한 시스템 프로그래밍 언어입니다. 2010년에 처음 공개되었으며, 2015년에 1.0 버전이 릴리스되었습니다.&lt;/p>
@@ -300,4 +300,4 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> v.push(&lt;span style="color:#ae81ff">4&lt;/span>); &lt;span style="color:#75715e">// 컴파일 에러! 가변 참조와 불변 참조 동시 사용 불가
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#a6e22e">println!&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;First: &lt;/span>&lt;span style="color:#e6db74">{}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>, first);
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>위 코드는 컴파일되지 않습니다. Rust의 소유권 시스템이 런타임 에러를 컴파일 타임에 방지합니다.&lt;/p></description></item><item><title>Rust 프로그래밍</title><link>http://localhost:1313/series/rust-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/series/rust-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/</guid><description>&lt;p>Rust 언어의 기초부터 고급 주제까지 다루는 시리즈입니다.&lt;/p></description></item></channel></rss>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>위 코드는 컴파일되지 않습니다. Rust의 소유권 시스템이 런타임 에러를 컴파일 타임에 방지합니다.&lt;/p></description></item><item><title>Rust 프로그래밍</title><link>https://seungyeah.github.io/seungyeah/series/rust-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://seungyeah.github.io/seungyeah/series/rust-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/</guid><description>&lt;p>Rust 언어의 기초부터 고급 주제까지 다루는 시리즈입니다.&lt;/p></description></item></channel></rss>
