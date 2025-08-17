@@ -36,15 +36,12 @@
                             <h3 class="series-post-title">
                                 <a href="{{ $post.Permalink }}">{{ $post.Title }}</a>
                             </h3>
-                            {{ if $post.Summary }}
-                            <div class="series-post-summary">{{ $post.Summary }}</div>
-                            {{ end }}
                             <div class="series-post-meta">
                                 <time datetime="{{ $post.Date.Format "2006-01-02" }}">{{ $post.Date.Format "2006년 1월 2일" }}</time>
                                 {{ if $post.Params.tags }}
                                 <div class="series-post-tags">
                                     {{ range $post.Params.tags }}
-                                    <a href="{{ relURL (print "/tags/" . | urlize) }}" class="series-post-tag">
+                                    <a href="{{ (printf "/tags/%s/" (urlize .)) | relURL }}" class="series-post-tag">
                                         <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="12"
                                             height="12">
                                             <path fill-rule="evenodd"

@@ -1,7 +1,6 @@
 baseURL = "http://localhost:1313/"
 languageCode = "ko-kr"
 title = "승예's Blog"
-theme = "github-style"
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 
