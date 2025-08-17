@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://seungyeah.github.io"
 languageCode = "ko-kr"
 title = "승예's Blog"
 pygmentsCodeFences = true
@@ -33,11 +33,11 @@ pygmentsUseClasses = true
 [menu]
   [[menu.main]]
     name = "Posts"
-    url = "/posts"
+    url = "posts"
     weight = 10
   [[menu.main]]
     name = "Series"
-    url = "/series"
+    url = "series"
     weight = 10  
 
 [services]
