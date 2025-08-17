@@ -1,4 +1,4 @@
-baseURL = "https://seungyeah.github.io/seungyeah"
+baseURL = "/"
 languageCode = "ko-kr"
 title = "승예's Blog"
 pygmentsCodeFences = true
@@ -9,7 +9,7 @@ pygmentsUseClasses = true
   description = "안녕하세요! 웹 개발자입니다!"
   github = "seungyeah"
   email = "your-email@gmail.com"
-  url = "https://seungyeah.github.io/seungyeah"
+  url = "/"
   keywords = "blog, tech, programming"
   rss = true
   lastmod = true
@@ -33,11 +33,11 @@ pygmentsUseClasses = true
 [menu]
   [[menu.main]]
     name = "Posts"
-    url = "https://seungyeah.github.io/seungyeah/posts"
+    url = "/posts"
     weight = 10
   [[menu.main]]
     name = "Series"
-    url = "https://seungyeah.github.io/seungyeah/series"
+    url = "/series"
     weight = 10  
 
 [services]
