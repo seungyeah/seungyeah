@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ownership on 승예's Blog</title><link>http://localhost:1313/tags/ownership/</link><description>Recent content in Ownership on 승예's Blog</description><generator>Hugo</generator><language>ko-kr</language><lastBuildDate>Mon, 18 Aug 2025 01:03:25 +0900</lastBuildDate><atom:link href="http://localhost:1313/tags/ownership/index.xml" rel="self" type="application/rss+xml"/><item><title>Rust 소유권 시스템 이해하기</title><link>http://localhost:1313/posts/rust-post-4/</link><pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/rust-post-4/</guid><description>&lt;h2 id="소유권이란">소유권이란?&lt;/h2>
+&lt;p>소유권(Ownership)은 Rust의 핵심 특징으로, 메모리 안전성을 보장하면서도 가비지 컬렉터 없이 메모리를 관리할 수 있게 해줍니다.&lt;/p>
+&lt;h2 id="소유권-규칙">소유권 규칙&lt;/h2>
+&lt;ol>
+&lt;li>Rust의 각 값은 소유자(owner)를 가집니다.&lt;/li>
+&lt;li>한 번에 딱 하나의 소유자만 존재할 수 있습니다.&lt;/li>
+&lt;li>소유자가 스코프를 벗어나면, 값이 버려집니다.&lt;/li>
+&lt;/ol>
+&lt;h2 id="move-의미론">Move 의미론&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-rust" data-lang="rust">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">let&lt;/span> s1 &lt;span style="color:#f92672">=&lt;/span> String::from(&lt;span style="color:#e6db74">&amp;#34;hello&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">let&lt;/span> s2 &lt;span style="color:#f92672">=&lt;/span> s1; &lt;span style="color:#75715e">// s1이 s2로 move됨
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// println!(&amp;#34;{}&amp;#34;, s1); // 에러! s1은 더 이상 유효하지 않음
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="clone을-이용한-복사">Clone을 이용한 복사&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-rust" data-lang="rust">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">let&lt;/span> s1 &lt;span style="color:#f92672">=&lt;/span> String::from(&lt;span style="color:#e6db74">&amp;#34;hello&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">let&lt;/span> s2 &lt;span style="color:#f92672">=&lt;/span> s1.clone(); &lt;span style="color:#75715e">// 깊은 복사
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#a6e22e">println!&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;&lt;/span>&lt;span style="color:#e6db74">{}&lt;/span>&lt;span style="color:#e6db74">, &lt;/span>&lt;span style="color:#e6db74">{}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>, s1, s2); &lt;span style="color:#75715e">// 정상 작동
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>

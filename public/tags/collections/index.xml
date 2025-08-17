@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Collections on 승예's Blog</title><link>http://localhost:1313/tags/collections/</link><description>Recent content in Collections on 승예's Blog</description><generator>Hugo</generator><language>ko-kr</language><lastBuildDate>Mon, 18 Aug 2025 01:03:25 +0900</lastBuildDate><atom:link href="http://localhost:1313/tags/collections/index.xml" rel="self" type="application/rss+xml"/><item><title>Rust 컬렉션: 벡터, 문자열, 해시맵</title><link>http://localhost:1313/posts/rust-post-11/</link><pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/rust-post-11/</guid><description>&lt;h2 id="벡터-vector">벡터 (Vector)&lt;/h2>
+&lt;p>벡터는 같은 타입의 값들을 저장하는 가변 크기 배열입니다.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-rust" data-lang="rust">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#66d9ef">mut&lt;/span> v &lt;span style="color:#f92672">=&lt;/span> Vec::new();
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>v.push(&lt;span style="color:#ae81ff">5&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>v.push(&lt;span style="color:#ae81ff">6&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>v.push(&lt;span style="color:#ae81ff">7&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// 또는 vec! 매크로 사용
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">let&lt;/span> v &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">vec!&lt;/span>[&lt;span style="color:#ae81ff">1&lt;/span>, &lt;span style="color:#ae81ff">2&lt;/span>, &lt;span style="color:#ae81ff">3&lt;/span>];
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="문자열-string">문자열 (String)&lt;/h2>
+&lt;p>Rust에는 두 가지 주요 문자열 타입이 있습니다.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-rust" data-lang="rust">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#66d9ef">mut&lt;/span> s &lt;span style="color:#f92672">=&lt;/span> String::new();
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>s.push_str(&lt;span style="color:#e6db74">&amp;#34;hello&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>s.push(&lt;span style="color:#e6db74">&amp;#39; &amp;#39;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>s.push(&lt;span style="color:#e6db74">&amp;#39;w&amp;#39;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">let&lt;/span> s1 &lt;span style="color:#f92672">=&lt;/span> String::from(&lt;span style="color:#e6db74">&amp;#34;Hello, &amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">let&lt;/span> s2 &lt;span style="color:#f92672">=&lt;/span> String::from(&lt;span style="color:#e6db74">&amp;#34;world!&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">let&lt;/span> s3 &lt;span style="color:#f92672">=&lt;/span> s1 &lt;span style="color:#f92672">+&lt;/span> &lt;span style="color:#f92672">&amp;amp;&lt;/span>s2; &lt;span style="color:#75715e">// s1은 더 이상 사용할 수 없음
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="해시맵-hashmap">해시맵 (HashMap)&lt;/h2>
+&lt;p>키-값 쌍을 저장하는 컬렉션입니다.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-rust" data-lang="rust">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">use&lt;/span> std::collections::HashMap;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">let&lt;/span> &lt;span style="color:#66d9ef">mut&lt;/span> scores &lt;span style="color:#f92672">=&lt;/span> HashMap::new();
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>scores.insert(String::from(&lt;span style="color:#e6db74">&amp;#34;Blue&amp;#34;&lt;/span>), &lt;span style="color:#ae81ff">10&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>scores.insert(String::from(&lt;span style="color:#e6db74">&amp;#34;Yellow&amp;#34;&lt;/span>), &lt;span style="color:#ae81ff">50&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">let&lt;/span> team_name &lt;span style="color:#f92672">=&lt;/span> String::from(&lt;span style="color:#e6db74">&amp;#34;Blue&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">let&lt;/span> score &lt;span style="color:#f92672">=&lt;/span> scores.get(&lt;span style="color:#f92672">&amp;amp;&lt;/span>team_name);
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>

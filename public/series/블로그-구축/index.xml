@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>블로그 구축 on 승예's Blog</title><link>http://localhost:1313/series/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95/</link><description>Recent content in 블로그 구축 on 승예's Blog</description><generator>Hugo</generator><language>ko-kr</language><lastBuildDate>Sun, 17 Aug 2025 21:10:08 +0900</lastBuildDate><atom:link href="http://localhost:1313/series/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello World - Hugo 블로그 시작하기</title><link>http://localhost:1313/posts/second-post/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/second-post/</guid><description>&lt;h2 id="소개">소개&lt;/h2>
+&lt;p>안녕하세요! 이 글에서는 Hugo를 사용하여 정적 블로그를 구축하는 방법에 대해 알아보겠습니다.&lt;/p>
+&lt;h2 id="hugo란">Hugo란?&lt;/h2>
+&lt;p>Hugo는 Go 언어로 작성된 정적 사이트 생성기입니다. 빠른 속도와 간단한 사용법으로 많은 개발자들이 선호하는 도구입니다.&lt;/p>
+&lt;h3 id="주요-특징">주요 특징&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>빠른 속도&lt;/strong>: Go 언어의 성능을 활용하여 매우 빠른 빌드 속도&lt;/li>
+&lt;li>&lt;strong>간단한 사용법&lt;/strong>: 단일 바이너리로 실행 가능&lt;/li>
+&lt;li>&lt;strong>다양한 테마&lt;/strong>: 수많은 오픈소스 테마 제공&lt;/li>
+&lt;li>&lt;strong>마크다운 지원&lt;/strong>: 간편한 콘텐츠 작성&lt;/li>
+&lt;/ul>
+&lt;h2 id="설치-방법">설치 방법&lt;/h2>
+&lt;h3 id="1-hugo-설치">1. Hugo 설치&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># macOS&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>brew install hugo
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Windows&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>choco install hugo-extended
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Linux&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt install hugo
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="2-새-사이트-생성">2. 새 사이트 생성&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>hugo new site my-blog
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd my-blog
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="3-테마-추가">3. 테마 추가&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git init
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>echo &lt;span style="color:#e6db74">&amp;#34;theme = &amp;#39;ananke&amp;#39;&amp;#34;&lt;/span> &amp;gt;&amp;gt; config.toml
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="첫-번째-포스트-작성">첫 번째 포스트 작성&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>hugo new posts/my-first-post.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>마크다운 파일을 편집하여 콘텐츠를 작성합니다:&lt;/p></description></item></channel></rss>
