@@ -9,19 +9,19 @@ pygmentsUseClasses = true
   description = "안녕하세요! 웹 개발자입니다!"
   github = "seungyeah"
   email = "closer.fz@gmail.com"
-  url = "https://seungyeah.github.io/"   # 필요하면 이렇게(= baseURL과 동일). 아니면 이 라인 삭제.
+  url = "https://seungyeah.github.io/"   
   keywords = "blog, tech, programming"
   rss = true
   lastmod = true
-  favicon = "images/github-mark.png"
-  avatar = "images/avatar.png"
-  headerIcon = "images/github-mark-white.png"
+  favicon = "/images/github-mark.png"
+  avatar = "/images/avatar.png"
+  headerIcon = "/images/github-mark-white.png"
   location = "Korea"
   userStatusEmoji = "😀"
   enableGitalk = false
   enableSearch = true
-  custom_css = ["css/custom.css"]
-  custom_js = ["js/custom.js"]
+  custom_css = ["/css/custom.css"]
+  custom_js = ["/js/custom.js"]
 
 [frontmatter]
   lastmod = ["lastmod", ":fileModTime", ":default"]
@@ -33,7 +33,7 @@ pygmentsUseClasses = true
 [menu]
   [[menu.main]]
     name = "Posts"
-    url = "/posts/"     # 앞에 슬래시 붙이면 안전
+    url = "/posts/"     
     weight = 10
   [[menu.main]]
     name = "Series"
